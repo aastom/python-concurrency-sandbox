@@ -1,6 +1,6 @@
 # Python Concurrency Sandbox
 
-This repository is a curated collection of small, self-contained Python scripts designed to provide a foundational understanding of concurrency in Python. It covers `threading`, `multiprocessing`, `asyncio`, and synchronization primitives, emphasizing practical usage, common pitfalls, and the unique challenges posed by the Global Interpreter Lock (GIL).
+This repository is a curated collection of small, self-contained Python scripts designed to provide a foundational understanding of concurrency in Python. It covers `threading`, `multiprocessing`, `asyncio`, and synchronization primitives, emphasizing practical usage, common pitfalls, and the unique challenges posed by the Global Interpreter Lock (GIL). The project aims to build intuition for *when* to use each tool, *why* it behaves the way it does, and *how* to debug the subtle, non-deterministic issues that often arise.
 
 ## Learning Journey Overview
 
@@ -11,8 +11,8 @@ graph TD
     A[Start: Core Concepts & GIL] --> B{Threading for I/O-Bound Tasks};
     B -- Successful I/O-Bound Example --> C{Multiprocessing for CPU Parallelism};
     B -- CPU-Bound (GIL Impact) --> C;
-    C -- Successful CPU-Bound Example --> D{Asyncio for High-Concurrency I/O};
     C -- IPC Awareness --> D;
+    C -- Successful CPU-Bound Example --> D;
     D -- Successful Async I/O --> E{Synchronization Primitives};
     D -- Blocking Pitfall --> E;
     E -- Race Condition Demo --> F{Decision Guide & Use Cases};
@@ -63,3 +63,12 @@ graph TD
 *   [Real Python: An Intro to Threading in Python](https://realpython.com/intro-to-python-threading/)
 *   [Real Python: Speed Up Your Python Programs with Concurrency](https://realpython.com/python-concurrency/)
 *   [David Beazley: Generators, Coroutines, Concurrency](https://www.dabeaz.com/coroutines/Coroutines.pdf) (Advanced, but excellent for `asyncio` fundamentals)
+
+## 📚 Documentation
+
+All formal documentation for the Python Concurrency Sandbox project is published to Google Drive, offering rich formatting and easy access:
+
+*   **Drive Folder:** [Python Concurrency Sandbox — R&D Lab](https://drive.google.com/drive/folders/1gFLYp4tAYo9MpbF1eX4eDCVWeLJ0nIGl)
+*   **Main Documentation Bundle:** [Python Concurrency Sandbox - Documentation Bundle](https://docs.google.com/document/d/1lu3nYrE7u9Zu5f8UyZWYFRV2eBHFAknMJ4hChzTaE0Q/edit?usp=drivesdk)
+
+Within the Drive folder, you will find a detailed Learning Roadmap and PDF copies of key reference materials.
